@@ -65,6 +65,7 @@
     border-color: #1877f2;
 }
 .primaryButton{
+    cursor: pointer;
     border: 0;
     background-color: #1877f2;
     color: white;
@@ -92,6 +93,7 @@
   opacity: 0.9;
   align-self: center;
   margin-top: 10px;
+  cursor: pointer;
 }
 .createPageLink{
   margin-top: 20px;
@@ -101,4 +103,87 @@
 .createPageLink a{
   text-decoration: none;
   color: black;
+}
+.modalContainer {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.modalField, .credsField {
+  padding: 10px;
+  height: 37px;
+  border-radius: 5px;
+  border-width: 0.1px;
+  border-color: rgba(170, 170, 170, 0.3);
+  background-color: #F5F6F7;
+}
+.modalField {
+  width: 196px;
+}
+.credsField, .person, .bioData {
+  width: 405px;
+}
+.credsField {
+  margin-bottom: 10px;
+}
+.person {
+  display: flex;
+  margin: 10px 0;
+  justify-content: space-between;
+}
+.bioData label {
+  opacity: 0.6;
+  font-size: 12px;
+}
+.bioData {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.questionMark {
+  cursor: pointer;
+  width: 12px;
+}
+.dob {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 8px;
+}
+.selectField, .genderButton {
+  width: 130px;
+  padding: 10px;
+  height: 37px;
+  border-radius: 5px;
+  font-size: 10px;
+  background-color: #fff;
+  border-width: 0.1px;
+  border-color: rgba(170, 170, 170, 0.7);
+}
+.genderButton {
+  display: flex;
+  justify-content: space-between;
+}
+.terms {
+  font-size: 10px;
+  color: rgba(0, 0, 0, 0.6);
+}
+.terms a {
+  text-decoration: none;
+  font-weight: 400;
+  color: #1877f2;
+}
+.signUpButton {
+  align-self: center;
+  width: 180px;
+  padding: 3px 15px;
+  border-radius: 5px;
+  border-width: 0;
+  background-color: rgb(36, 173, 36);
+  color: #fff;
+  font-size: 18px;
+  margin-top: 15px;
+  font-weight: bold;
+}
+.signUpButton:hover {
+  background-color: #67995B;
 }
