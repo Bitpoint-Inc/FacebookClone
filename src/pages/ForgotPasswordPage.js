@@ -2,8 +2,9 @@ import React from "react";
 import Logo from "../components/Logo";
 
 import style from "../static/css/ForgotPassword.module.css";
+import { routes } from "./routes";
 
-const ForgotPasswordPage = () => {
+const ForgotPasswordPage = ({ history }) => {
   return (
     <section className={style.container}>
       <nav className={style.navBar}>
@@ -35,12 +36,21 @@ const ForgotPasswordPage = () => {
       </nav>
       <div className={style.body}>
         <div className={style.card}>
-          <h3>Find Your Account</h3>
-          <hr />
-          <input type="text" placeholder="Mobile number" />
-          <hr />
+          <div className={style.cardHeader}>
+            <h3>Find Your Account</h3>
+          </div>
+          <hr className={style.hr} />
+          <div className={style.cardBody}>
+            <p>
+              Please enter your email address or mobile number to search for
+              your account.
+            </p>
+            <input type="text" placeholder="Mobile number" />
+          </div>
+          <hr className={style.hr} />
           <div className={style.cardFooter}>
             <input
+              onClick={() => history.push(routes.welcomePage)}
               type="button"
               value="Cancel"
               className={style.cancelButton}

@@ -2,8 +2,9 @@ import React from "react";
 
 import style from "../static/css/Welcome.module.css";
 import logo from "../static/img/logo.svg";
+import { routes } from "./routes";
 
-const WelcomePage = () => {
+const WelcomePage = ({ history }) => {
   return (
     <section className={style.container}>
       <div className={style.leftSection}>
@@ -32,7 +33,11 @@ const WelcomePage = () => {
             <button type="submit" name="submit" className={style.primaryButton}>
               Log In
             </button>
-            <a href="#b" className={style.forgotPasswordLink}>
+            <a
+              href="#b"
+              onClick={() => history.push(routes.forgotPasswordPage)}
+              className={style.forgotPasswordLink}
+            >
               Forgotten password?
             </a>
             <hr className={style.hr} />
